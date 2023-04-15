@@ -1,4 +1,4 @@
-" MRU abbreviations.
+" User-custom abbreviations
 " Created by: Tan Duc Mai (tan.duc.work@gmail.com)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -10,10 +10,10 @@
 "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-iab @@ tan.duc.work@gmail.com
-iab unisa University of South Australia
-iab SA South Australia
-iab ms Microsoft
-iab MS Microsoft
-iab ytb YouTube
-iab ToC Table of Contents
+ia @@ tan.duc.work@gmail.com
+ia unisa University of South Australia
+ia SA South Australia
+ia ms Microsoft
+ia MS Microsoft
+ia ytb YouTube
+ia ToC Table of Contents
