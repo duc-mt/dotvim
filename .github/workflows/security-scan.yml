@@ -16,26 +16,32 @@ jobs:
   secret-scan:
     name: 🔍 Secret scanning
     runs-on: ubuntu-latest
-    # gitleaks-action is free for personal-account repos (confirmed via
-    # its own docs) -- this repo qualifies. Worth knowing: it's an
-    # EULA-licensed, closed-source action from a commercial company
-    # (Gitleaks LLC), not a community open-source tool -- the license
-    # terms only permit free use for personal accounts, not
-    # organizations. If this repo ever transfers to an org, a
-    # GITLEAKS_LICENSE secret would become required.
-    permissions:
-      contents: read
-      pull-requests: write # required for gitleaks-action's PR-comment feature
+    # Installed directly from gitleaks' own GitHub releases rather than the
+    # third-party gitleaks-action (EULA-licensed, closed-source, requires a
+    # paid license key if this repo ever transfers to an org). The CLI itself
+    # is plain MIT-licensed and needs no token or org permission. Matches the
+    # same pattern used in duc-mt/dotfiles secret-scan.yml.
     steps:
       - name: ➡️ Checkout (full history for scanning)
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         with:
           fetch-depth: 0
 
-      - name: 🔍 Run gitleaks
-        uses: gitleaks/gitleaks-action@ff98106e4c7b2bc287b24eaf42907196329070c7 # v2.3.9
+      - name: 📥 Install Gitleaks
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLEAKS_VERSION: "8.30.1"
+        run: |
+          curl -sSL -o /tmp/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz \
+            "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz"
+          curl -sSL -o /tmp/gitleaks_${GITLEAKS_VERSION}_checksums.txt \
+            "https://github.com/gitleaks/gitleaks/releases/download/v${GITLEAKS_VERSION}/gitleaks_${GITLEAKS_VERSION}_checksums.txt"
+          (cd /tmp && sha256sum --ignore-missing -c gitleaks_${GITLEAKS_VERSION}_checksums.txt)
+          sudo tar --extract --gzip --file /tmp/gitleaks_${GITLEAKS_VERSION}_linux_x64.tar.gz \
+            --directory /usr/local/bin gitleaks
+          gitleaks version
+
+      - name: 🕵️ Scan full history for secrets
+        run: gitleaks git --redact --verbose .
 
   regression-check:
     name: 🔒 Hand-fixed security regression check
