@@ -32,4 +32,4 @@ jobs:
     # post-sync-validate.yml, which exists specifically to catch a bad
     # auto-sync after the fact, and nightly-plugin-compat.yml, which
     # tries to catch it before the 3am run even happens.
-    uses: duc-mt/dotfiles/.github/workflows/sync-submodules.yml@8abf98c7ea226809e281b8cfbbf9d0999dd7e029 # master, pinned 2026-08
+    uses: duc-mt/dotfiles/.github/workflows/sync-submodules.yml@9f7de2561bcf6247a79d4568d1c7c5a29d38cf0a # master, pinned 2026-09
