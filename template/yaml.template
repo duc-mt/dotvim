@@ -6,11 +6,14 @@
 # Version:       1.0.0
 # License:       MIT
 # ==============================================================================
+# Usage:         ansible-playbook -i inventory ${1:playbook.yml}
+# Notes:         ${3:Requirements or vault secrets needed}
+# ==============================================================================
 ---
-- name: ${3:Playbook Name}
-  hosts: ${4:all}
+- name: ${4:Playbook Name}
+  hosts: ${5:all}
   gather_facts: true
   tasks:
-    - name: ${5:Task description}
+    - name: ${6:Task description}
       ansible.builtin.debug:
         msg: "Executing playbook..."

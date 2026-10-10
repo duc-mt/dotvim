@@ -5,6 +5,9 @@
 // Version:       1.0.0
 // License:       MIT
 // ==============================================================================
+// Usage:         go run main.go [options]
+// Notes:         ${2:Prerequisites or build flags}
+// ==============================================================================
 package main
 
 import (

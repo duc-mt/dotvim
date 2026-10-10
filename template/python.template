@@ -9,6 +9,9 @@ Created:       $(date +'%Y-%m-%d')
 Version:       1.0.0
 License:       MIT
 ==============================================================================
+Usage:         python3 ${1:module_name.py} [options]
+Notes:         ${3:System requirements or dependencies}
+==============================================================================
 """
 
 import sys
