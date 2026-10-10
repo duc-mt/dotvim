@@ -1,15 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Filename: ${1:script.py}
+File: ${1:script.py}
 Author: Mai Tan Duc <ducmai.network@gmail.com>
 Description: ${2:Module description}
 """
 
 import sys
-from rich.traceback import install
 
-install(show_locals=True)
+try:
+    from rich.traceback import install
+    install(show_locals=True)
+except ImportError:
+    pass
 
 
 def main() -> int:

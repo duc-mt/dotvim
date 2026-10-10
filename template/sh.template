@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
-# ==============================================================================
-#      FILENAME:  ${1:script.sh}
-#        AUTHOR:  Mai Tan Duc <ducmai.network@gmail.com>
-#       CREATED:  $(date +'%Y-%m-%d')
-#   DESCRIPTION:  ${2:Script description here}
-# ==============================================================================
+# File: ${1:script.sh}
+# Author: Mai Tan Duc <ducmai.network@gmail.com>
+# Description: ${2:Script description}
 
 set -euo pipefail
 IFS=$'\n\t'
