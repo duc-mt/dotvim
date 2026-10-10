@@ -1,4 +1,15 @@
 #!/usr/bin/env bash
+# ==============================================================================
+# Script Name:   measure-startup-time.sh
+# Description:   Implementation and logic for measure-startup-time.
+# Author:        Mai Tan Duc <ducmai.network@gmail.com>
+# Created:       2026-10-10
+# Version:       1.0.0
+# License:       MIT
+# ==============================================================================
+# Usage:         ./measure-startup-time.sh [options] [arguments]
+# Notes:         Automated bash utility script
+# ==============================================================================
 # Measure Vim startup time across N runs and print the median in
 # milliseconds. Used by startup-benchmark.yml to track regressions in the
 # lazy-loading work done across this repo's fix history (moving

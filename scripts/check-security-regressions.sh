@@ -1,4 +1,15 @@
 #!/usr/bin/env bash
+# ==============================================================================
+# Script Name:   check-security-regressions.sh
+# Description:   Implementation and logic for check-security-regressions.
+# Author:        Mai Tan Duc <ducmai.network@gmail.com>
+# Created:       2026-10-10
+# Version:       1.0.0
+# License:       MIT
+# ==============================================================================
+# Usage:         ./check-security-regressions.sh [options] [arguments]
+# Notes:         Automated bash utility script
+# ==============================================================================
 # Re-assert two specific, hand-found-and-fixed security issues from this
 # repo's history haven't silently regressed:
 #

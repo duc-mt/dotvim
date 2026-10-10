@@ -1,4 +1,15 @@
 #!/usr/bin/env bash
+# ==============================================================================
+# Script Name:   check-nightly-plugin-compat.sh
+# Description:   Implementation and logic for check-nightly-plugin-compat.
+# Author:        Mai Tan Duc <ducmai.network@gmail.com>
+# Created:       2026-10-10
+# Version:       1.0.0
+# License:       MIT
+# ==============================================================================
+# Usage:         ./check-nightly-plugin-compat.sh [options] [arguments]
+# Notes:         Automated bash utility script
+# ==============================================================================
 # Preview exactly what the scheduled sync workflow (sync-plugins.yml,
 # delegating to duc-mt/dotfiles/sync-submodules.yml) would produce if it
 # ran right now, WITHOUT committing or pushing anything. That external
