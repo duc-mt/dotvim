@@ -1,5 +1,10 @@
+// ==============================================================================
 // Package main implements ${1:description}.
-// Author: Mai Tan Duc <ducmai.network@gmail.com>
+// Author:        Mai Tan Duc <ducmai.network@gmail.com>
+// Created:       $(date +'%Y-%m-%d')
+// Version:       1.0.0
+// License:       MIT
+// ==============================================================================
 package main
 
 import (

@@ -1,11 +1,16 @@
+# ==============================================================================
+# File Name:     ${1:playbook.yml}
+# Description:   ${2:Briefly describe what this playbook accomplishes}
+# Author:        Mai Tan Duc <ducmai.network@gmail.com>
+# Created:       $(date +'%Y-%m-%d')
+# Version:       1.0.0
+# License:       MIT
+# ==============================================================================
 ---
-# Description: ${1:Playbook or configuration description}
-# Author: Mai Tan Duc <ducmai.network@gmail.com>
-
-- name: ${2:Playbook Name}
-  hosts: ${3:all}
+- name: ${3:Playbook Name}
+  hosts: ${4:all}
   gather_facts: true
   tasks:
-    - name: ${4:Task description}
+    - name: ${5:Task description}
       ansible.builtin.debug:
         msg: "Executing playbook..."
