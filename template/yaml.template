@@ -1,0 +1,11 @@
+---
+# Description: ${1:Playbook or configuration description}
+# Author: Mai Tan Duc <ducmai.network@gmail.com>
+
+- name: ${2:Playbook Name}
+  hosts: ${3:all}
+  gather_facts: true
+  tasks:
+    - name: ${4:Task description}
+      ansible.builtin.debug:
+        msg: "Executing playbook..."
