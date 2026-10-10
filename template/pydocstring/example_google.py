@@ -91,7 +91,7 @@ def function_with_pep484_type_annotations(param1: int, param2: str) -> bool:
 
 
 def module_level_function(param1, param2=None, *args, **kwargs):
-    """This is an example of a module level function.
+    r"""This is an example of a module level function.
 
     Function parameters should be documented in the ``Args`` section. The name
     of each parameter is required. The type and description of each parameter
@@ -161,8 +161,7 @@ def example_generator(n):
         [0, 1, 2, 3]
 
     """
-    for i in range(n):
-        yield i
+    yield from range(n)
 
 
 class ExampleError(Exception):
@@ -192,7 +191,7 @@ class ExampleError(Exception):
         self.code = code
 
 
-class ExampleClass(object):
+class ExampleClass:
     """The summary line for a class docstring should fit on one line.
 
     If the class has public attributes, they may be documented here
@@ -287,7 +286,6 @@ class ExampleClass(object):
             napoleon_include_special_with_doc = True
 
         """
-        pass
 
     def __special_without_docstring__(self):
         pass
@@ -305,7 +303,6 @@ class ExampleClass(object):
             napoleon_include_private_with_doc = True
 
         """
-        pass
 
     def _private_without_docstring(self):
         pass
