@@ -1,20 +1,18 @@
 #!/usr/bin/env bash
-# File: ${1:script.sh}
-# Author: Mai Tan Duc <ducmai.network@gmail.com>
-# Description: ${2:Script description}
+# ==============================================================================
+# Script Name:   ${1:script_name.sh}
+# Description:   ${2:Briefly describe what this script accomplishes}
+# Author:        Mai Tan Duc <ducmai.network@gmail.com>
+# Created:       $(date +'%Y-%m-%d')
+# Version:       1.0.0
+# License:       MIT
+# ==============================================================================
+# Usage:         ./${1:script_name.sh} [options] [arguments]
+# Notes:         ${3:System requirements or prerequisites}
+# ==============================================================================
 
 set -euo pipefail
 IFS=$'\n\t'
-
-usage() {
-    cat <<EOF
-Usage: $(basename "$0") [options]
-
-Options:
-    -h, --help    Show this help message and exit
-EOF
-    exit 1
-}
 
 main() {
     echo "Starting script..."
