@@ -1,4 +1,15 @@
 #!/usr/bin/env bash
+# ==============================================================================
+# Script Name:   check-gitmodules-consistency.sh
+# Description:   Implementation and logic for check-gitmodules-consistency.
+# Author:        Mai Tan Duc <ducmai.network@gmail.com>
+# Created:       2026-10-10
+# Version:       1.0.0
+# License:       MIT
+# ==============================================================================
+# Usage:         ./check-gitmodules-consistency.sh [options] [arguments]
+# Notes:         Automated bash utility script
+# ==============================================================================
 # Verify every path declared in .gitmodules has a corresponding directory
 # on disk, and every pack/*/{start,opt}/<plugin> directory has a
 # corresponding .gitmodules entry. Catches the exact class of drift that

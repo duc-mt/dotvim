@@ -1,4 +1,15 @@
 #!/usr/bin/env bash
+# ==============================================================================
+# Script Name:   ftplugin-open-test.sh
+# Description:   Implementation and logic for ftplugin-open-test.
+# Author:        Mai Tan Duc <ducmai.network@gmail.com>
+# Created:       2026-10-10
+# Version:       1.0.0
+# License:       MIT
+# ==============================================================================
+# Usage:         ./ftplugin-open-test.sh [options] [arguments]
+# Notes:         Automated bash utility script
+# ==============================================================================
 # Open one throwaway file of every filetype this repo has a ftplugin/ for,
 # in a single Vim session (so cross-filetype mapping-collision regressions
 # would surface too), and fail on any Vim error.

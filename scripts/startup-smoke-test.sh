@@ -1,4 +1,15 @@
 #!/usr/bin/env bash
+# ==============================================================================
+# Script Name:   startup-smoke-test.sh
+# Description:   Implementation and logic for startup-smoke-test.
+# Author:        Mai Tan Duc <ducmai.network@gmail.com>
+# Created:       2026-10-10
+# Version:       1.0.0
+# License:       MIT
+# ==============================================================================
+# Usage:         ./startup-smoke-test.sh [options] [arguments]
+# Notes:         Automated bash utility script
+# ==============================================================================
 # Source vimrc headlessly and fail if Vim reports any E### error, or exits
 # non-zero. This is the single highest-leverage check for this repo: most
 # bugs found by hand across this repo's fix history (the spellcapcheck

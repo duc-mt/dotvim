@@ -1,4 +1,15 @@
 #!/usr/bin/env bash
+# ==============================================================================
+# Script Name:   check-ftplugin-hygiene.sh
+# Description:   Implementation and logic for check-ftplugin-hygiene.
+# Author:        Mai Tan Duc <ducmai.network@gmail.com>
+# Created:       2026-10-10
+# Version:       1.0.0
+# License:       MIT
+# ==============================================================================
+# Usage:         ./check-ftplugin-hygiene.sh [options] [arguments]
+# Notes:         Automated bash utility script
+# ==============================================================================
 # Lint ftplugin/*.vim for two specific, previously-real bug classes found
 # by hand in this repo's history:
 #

@@ -1,4 +1,15 @@
 #!/usr/bin/env bash
+# ==============================================================================
+# Script Name:   run-vint.sh
+# Description:   Implementation and logic for run-vint.
+# Author:        Mai Tan Duc <ducmai.network@gmail.com>
+# Created:       2026-10-10
+# Version:       1.0.0
+# License:       MIT
+# ==============================================================================
+# Usage:         ./run-vint.sh [options] [arguments]
+# Notes:         Automated bash utility script
+# ==============================================================================
 # Run vint (Vimscript linter) at error-severity across the files it can
 # actually parse, and separately report vimrc's known parser-limitation
 # finding as non-blocking. See .vintrc.yaml for the full rationale.

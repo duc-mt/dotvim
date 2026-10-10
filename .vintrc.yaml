@@ -1,3 +1,11 @@
+# ==============================================================================
+# File Name:     .vintrc.yaml
+# Description:   Implementation and logic for .vintrc.
+# Author:        Mai Tan Duc <ducmai.network@gmail.com>
+# Created:       2026-10-10
+# Version:       1.0.0
+# License:       MIT
+# ==============================================================================
 # vint (Vimscript linter) configuration.
 #
 # Policy severity is deliberately capped at "error" for the blocking CI
