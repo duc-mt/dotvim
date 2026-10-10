@@ -1,0 +1,27 @@
+# ${1:Project Title}
+
+${2:Brief project overview and purpose.}
+
+## Features
+
+- Feature 1
+- Feature 2
+
+## Prerequisites
+
+- Dependency 1
+- Dependency 2
+
+## Installation & Usage
+
+```bash
+# Clone the repository
+git clone https://github.com/duc-mt/${3:repository-name}.git
+cd ${3:repository-name}
+
+# Build or run
+```
+
+## License
+
+[MIT](LICENSE) © Mai Tan Duc

@@ -1,23 +1,26 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
+# ==============================================================================
+#      FILENAME:  ${1:script.sh}
+#        AUTHOR:  Mai Tan Duc <ducmai.network@gmail.com>
+#       CREATED:  $(date +'%Y-%m-%d')
+#   DESCRIPTION:  ${2:Script description here}
+# ==============================================================================
 
-# ======================================================================================
-#
-#         FILE:  script
-#
-#        USAGE:  ./script [-d] [-l] [-h] [starting directory]
-#
-#  DESCRIPTION:  List and/or delete all stale links in directory trees.
-#                The default starting directory is the current directory.
-#                Don’t descend directories on other filesystems.
-#
-#      OPTIONS:  see function ’usage’ below
-# REQUIREMENTS:  ---
-#         BUGS:  ---
-#        NOTES:  ---
-#       AUTHOR:  Duke Mai <henryfromvietnam@gmail.com>
-#      COMPANY:  Eynesbury Institute of Business and Technology (EIBT)
-#      VERSION:  1.0
-#      CREATED:  Mar 29, 2022
-#     REVISION:  ---
-#
-# ======================================================================================
+set -euo pipefail
+IFS=$'\n\t'
+
+usage() {
+    cat <<EOF
+Usage: $(basename "$0") [options]
+
+Options:
+    -h, --help    Show this help message and exit
+EOF
+    exit 1
+}
+
+main() {
+    echo "Starting script..."
+}
+
+main "$@"

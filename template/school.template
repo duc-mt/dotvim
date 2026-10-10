@@ -2,17 +2,21 @@
 # -*- coding: utf-8 -*-
 
 # =============================================================================
-#
-#        FILE:  practical1ex1.py
-#      AUTHOR:  Duke Mai
-#          ID:  517925
-#        DATE:  25-Apr-2022
-# DESCRIPTION:  Practical 1, exercise 1 -
-#               creates a guessing game.
+#        FILE:  ${1:exercise.py}
+#      AUTHOR:  Mai Tan Duc <ducmai.network@gmail.com>
+# DESCRIPTION:  ${2:Exercise description}
 #   This is my own work as defined by the Academic Integrity policy.
-#
 # =============================================================================
 
-# Enhance tracebacks
+import sys
 from rich.traceback import install
+
 install(show_locals=True)
+
+
+def main() -> int:
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

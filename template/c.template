@@ -1,0 +1,13 @@
+/*
+ * File: ${1:main.c}
+ * Author: Mai Tan Duc <ducmai.network@gmail.com>
+ * Description: ${2:Program description}
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+    printf("Hello, World!\n");
+    return EXIT_SUCCESS;
+}

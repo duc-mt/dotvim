@@ -2,16 +2,22 @@
 # -*- coding: utf-8 -*-
 
 # =============================================================================
-#
-#        FILE:  file_name.py
-#      AUTHOR:  Duke Mai <henryfromvietnam@gmail.com>
-#     CREATED:  25-Apr-2022
+#        FILE:  ${1:filename.py}
+#      AUTHOR:  Mai Tan Duc <ducmai.network@gmail.com>
 # DESCRIPTION:
 #   I hereby declare that I completed this work without any improper help
 #   from a third party and without using any aids other than those cited.
-#
 # =============================================================================
 
-# Enhance tracebacks
+import sys
 from rich.traceback import install
+
 install(show_locals=True)
+
+
+def main() -> int:
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

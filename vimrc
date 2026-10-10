@@ -412,9 +412,13 @@ augroup END
 " ==============================================================================
 
 aug templates
-  au BufNewFile *.sh   0r $DOTVIM/template/sh.template
-  au BufNewFile *.html 0r $DOTVIM/template/html.template
-  au BufNewFile *.py   0r $DOTVIM/template/python.template
+  au BufNewFile *.sh         0r $DOTVIM/template/sh.template
+  au BufNewFile *.html       0r $DOTVIM/template/html.template
+  au BufNewFile *.py         0r $DOTVIM/template/python.template
+  au BufNewFile *.go         0r $DOTVIM/template/go.template
+  au BufNewFile *.c,*.cpp    0r $DOTVIM/template/c.template
+  au BufNewFile *.md         0r $DOTVIM/template/markdown.template
+  au BufNewFile *.yml,*.yaml 0r $DOTVIM/template/yaml.template
 aug END
 
 aug filetypes
