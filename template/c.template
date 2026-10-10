@@ -1,7 +1,12 @@
 /*
- * File: ${1:main.c}
- * Author: Mai Tan Duc <ducmai.network@gmail.com>
- * Description: ${2:Program description}
+ * ==============================================================================
+ * File Name:     ${1:main.c}
+ * Description:   ${2:Briefly describe what this program accomplishes}
+ * Author:        Mai Tan Duc <ducmai.network@gmail.com>
+ * Created:       $(date +'%Y-%m-%d')
+ * Version:       1.0.0
+ * License:       MIT
+ * ==============================================================================
  */
 
 #include <stdio.h>
