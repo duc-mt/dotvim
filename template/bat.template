@@ -1,0 +1,18 @@
+@echo off
+rem ==============================================================================
+rem Script Name:   ${1:script_name.bat}
+rem Description:   ${2:Briefly describe what this batch script accomplishes}
+rem Author:        Mai Tan Duc <ducmai.network@gmail.com>
+rem Created:       $(date +'%Y-%m-%d')
+rem Version:       1.0.0
+rem License:       MIT
+rem ==============================================================================
+rem Usage:         ${1:script_name.bat} [options] [arguments]
+rem Notes:         ${3:System requirements or prerequisites}
+rem ==============================================================================
+
+setlocal enabledelayedexpansion
+
+echo Starting batch script...
+
+endlocal

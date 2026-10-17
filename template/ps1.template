@@ -1,0 +1,24 @@
+<#
+==============================================================================
+Script Name:   ${1:script_name.ps1}
+Description:   ${2:Briefly describe what this PowerShell script accomplishes}
+Author:        Mai Tan Duc <ducmai.network@gmail.com>
+Created:       $(date +'%Y-%m-%d')
+Version:       1.0.0
+License:       MIT
+==============================================================================
+Usage:         .\${1:script_name.ps1} [options]
+Notes:         ${3:System requirements or prerequisites}
+==============================================================================
+#>
+
+[CmdletBinding()]
+param()
+
+$ErrorActionPreference = "Stop"
+
+function Main {
+    Write-Host "Starting PowerShell script..."
+}
+
+Main
