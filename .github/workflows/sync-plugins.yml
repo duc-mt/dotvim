@@ -31,4 +31,4 @@ jobs:
     # and pushes directly to master with no PR gate -- see
     # post-sync-validate.yml, which exists specifically to catch a bad
     # auto-sync after the fact, and nightly-plugin-compat.yml, which
-    uses: duc-mt/dotfiles/.github/workflows/sync-submodules.yml@c0678e5f086445e76d6797800855e75a2ee78e43 # main, updated 2026-10
+    uses: duc-mt/dotfiles/.github/workflows/sync-submodules.yml@6b6182b797c9add4792a1cd58c059464cf4ca1af # main, updated 2026-10
