@@ -15,7 +15,7 @@
 # ran right now, WITHOUT committing or pushing anything. That external
 # workflow runs `git submodule update --init --recursive --remote`
 # (confirmed by reading its actual source, not assumed) then pushes
-# straight to master with no review gate. This script runs the identical
+# straight to main with no review gate. This script runs the identical
 # submodule-update command in the current checkout, then runs the same
 # validation the push/PR gate runs, so a bad upstream plugin commit is
 # visible BEFORE the 3am job would auto-merge it, not after.

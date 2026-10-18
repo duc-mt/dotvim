@@ -2,9 +2,9 @@ name: 🌙 Nightly plugin compatibility
 
 # Runs BEFORE sync-plugins.yml's scheduled 3am run (offset earlier),
 # previewing exactly what that job's `git submodule update --remote` +
-# direct push-to-master would produce. If tonight's real sync would
+# direct push-to-main would produce. If tonight's real sync would
 # break the config, this surfaces it in advance rather than after an
-# unreviewed push has already landed on master.
+# unreviewed push has already landed on main.
 on:
   schedule:
     - cron: '0 1 * * *' # 01:00 UTC, 2 hours before sync-plugins.yml
@@ -49,9 +49,9 @@ jobs:
               '',
               `Run: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
               '',
-              'sync-plugins.yml pushes directly to master with no review',
+              'sync-plugins.yml pushes directly to main with no review',
               'gate, so if this issue isn\'t addressed before 03:00 UTC, the',
-              'broken state will land on master unreviewed. Consider',
+              'broken state will land on main unreviewed. Consider',
               'disabling sync-plugins.yml\'s schedule trigger temporarily,',
               'or identifying and pinning the specific submodule causing',
               'the break.',

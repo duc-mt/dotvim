@@ -28,7 +28,7 @@ jobs:
     # of this fix (verified via `git ls-remote`, not guessed). This
     # workflow currently runs `git submodule update --remote` (always
     # takes each plugin's latest upstream commit, not a reviewed one)
-    # and pushes directly to master with no PR gate -- see
+    # and pushes directly to main with no PR gate -- see
     # post-sync-validate.yml, which exists specifically to catch a bad
     # auto-sync after the fact, and nightly-plugin-compat.yml, which
     uses: duc-mt/dotfiles/.github/workflows/sync-submodules.yml@6b6182b797c9add4792a1cd58c059464cf4ca1af # main, updated 2026-10

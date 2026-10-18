@@ -5,7 +5,7 @@ name: ✅ Validate
 # all; the only existing workflow (sync-plugins.yml) is schedule-only.
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
 
 # Least-privilege by default. No job here needs to write anything.

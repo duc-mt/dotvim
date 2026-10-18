@@ -3,9 +3,9 @@ name: 🔎 Post-sync validation
 # The existing sync-plugins.yml delegates to an external reusable
 # workflow that runs `git submodule update --remote` (always takes each
 # plugin's latest upstream commit, unreviewed) and pushes straight to
-# master -- confirmed by reading that workflow's actual content, not
+# main -- confirmed by reading that workflow's actual content, not
 # assumed. There is no PR gate on that push. This workflow exists to
-# catch a bad auto-sync AFTER it has already landed on master, since
+# catch a bad auto-sync AFTER it has already landed on main, since
 # nothing currently does.
 on:
   workflow_run:
@@ -32,10 +32,10 @@ jobs:
       github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
-      - name: ➡️ Checkout master (post-sync state, with submodules)
+      - name: ➡️ Checkout main (post-sync state, with submodules)
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
         with:
-          ref: master
+          ref: main
           submodules: recursive
 
       - name: 🐧 Install Vim
@@ -58,17 +58,17 @@ jobs:
         uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7.1.0
         with:
           script: |
-            const title = '🚨 Auto-sync produced a broken config on master';
+            const title = '🚨 Auto-sync produced a broken config on main';
             const body = [
               'The scheduled plugin sync (sync-plugins.yml) pushed an',
-              'update directly to master, and post-sync validation of',
+              'update directly to main, and post-sync validation of',
               'that state failed.',
               '',
               `Run: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
               '',
-              'That workflow pushes to master with no review gate, so',
-              'master may currently be in a broken state. Consider:',
-              '- `git log -1 --format=%H` on master to find the sync commit',
+              'That workflow pushes to main with no review gate, so',
+              'main may currently be in a broken state. Consider:',
+              '- `git log -1 --format=%H` on main to find the sync commit',
               '- `git revert` that commit if a specific plugin update is the cause',
               '- Checking which submodule advanced furthest as the likely culprit',
             ].join('\n');

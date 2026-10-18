@@ -9,13 +9,13 @@ name: 📊 Startup benchmark
 # inherently noisy (shared hardware, variable load), so a hard numeric
 # threshold would produce false-positive failures unrelated to any real
 # regression in this repo. Instead this records the number as a build
-# artifact and a step-summary on every push to master, so a genuine
+# artifact and a step-summary on every push to main, so a genuine
 # creeping regression is visible by comparing artifacts across runs in
 # the Actions history, without a fragile gate blocking unrelated PRs on
 # a noisy measurement.
 on:
   push:
-    branches: [master]
+    branches: [main]
   workflow_dispatch: {}
 
 permissions:
